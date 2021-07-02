@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anketa</title>
+</head>
+<body>
+    <h1 align="center">Заполните анкету</h1>
+    <form name="anketa" method="post" action="http://fe.it-academy.by/TestForm.php">
+        <fieldset>
+            <legend>Личные данные</legend>
+            <input type="text" name="surname" required size="25" autofocus pattern="^[А-Яа-яЁё]+$" placeholder="Фамилия"><br>
+            <input type="text" name="name" required size="20" pattern="^[А-Яа-яЁё]+$" placeholder="Имя"><br>
+            <input type="text" name="patron" required size="24" pattern="^[А-Яа-яЁё]+$" placeholder="Отчество"><br>
+            <fieldset>
+                <legend>Паспортные данные</legend>
+                <input type="text" name="ser_pas" required pattern="[A-Z]{2}" placeholder="AA">
+                <input type="text" name="num_pas" required pattern="[0-9]{7}" placeholder="1234567">
+            </fieldset>
+            <fieldset>
+                <legend>Дата рождения</legend>
+                <input type="text" name="year" required pattern="[0-9]{4}" placeholder="2000"><br>
+                <select name="month">
+                    <option value="1">Январь</option>
+                    <option value="2">Февраль</option>
+                    <option value="3">Март</option>
+                    <option value="4">Апрель</option>
+                    <option value="5">Май</option>
+                    <option value="6">Июнь</option>
+                    <option value="7">Июль</option>
+                    <option value="8">Август</option>
+                    <option value="9">Сентябрь</option>
+                    <option value="10">Октябрь</option>
+                    <option value="11">Ноябрь</option>
+                    <option value="12">Декабрь</option>
+                </select><br>
+                <input type="number" name="date" min="1" max="31" step="1">
+            </fieldset>
+            <select name="nation">
+                <option value="1">РБ</option>
+                <option value="2">РФ</option>
+                <option value="3">UA</option>
+                <option value="4">PL</option>
+                <option value="5">KZ</option>
+            </select><br>
+            <label>
+                Адрес:<br>
+                <textarea name="address"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Войти">
+    </form>
+</body>
+</html>
