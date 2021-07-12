@@ -7,30 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .base {
+            display: flex;
+            flex-direction: column;
+        }
+        .base2 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .base3 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
         .navigation {
             width: 15em;
             background-color: rgb(179, 173, 173);
-            float: left;
+            display: flex;
+            flex-direction: column;
         }
 
         .article {
             background-color: grey;
             margin-bottom: 2em;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .footer {
             background-color: rgb(179, 173, 173);
-            clear: both;
         }
-
         .right {
-            float: right;
+            align-self: flex-end;
         }
     </style>
 </head>
 
 <body>
+    <div class="base">
+        <div class="base2">
     <div class="navigation">
         <h1>Блок навигации</h1>
         <ul>
@@ -47,6 +63,7 @@
             </li>
         </ul>
     </div>
+    <div class="base3">
     <div class="article">
         <h1>Статья 1</h1>
         Размер блока:<br>
@@ -65,9 +82,12 @@
         организовано по правому краю внутри данной статьи для этой картинки.<br>
         <img src="data/icon_mail.png" alt="icon_mail" class="right">
     </div>
+</div>
+</div>
     <div class="footer">
         Нижний блок, занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.
     </div>
+</div>
 </body>
 
 </html>
