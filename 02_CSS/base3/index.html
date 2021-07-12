@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navigation {
+            width: 15em;
+            background-color: rgb(179, 173, 173);
+            float: left;
+        }
+
+        .article {
+            background-color: grey;
+            margin-bottom: 2em;
+            overflow: hidden;
+        }
+
+        .footer {
+            background-color: rgb(179, 173, 173);
+            clear: both;
+        }
+
+        .right {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        <h1>Блок навигации</h1>
+        <ul>
+            <li>Ширина 15em</li>
+            <li>Должен присутствовать цвет<br>
+                фона</li>
+            <li>Располагается слева</li>
+            <li>Блок навигации наполните<br>
+                контентом достаточным,<br>
+                чтобы по высоте он начинал<br>
+                захватывать вторую статью,<br>
+                как показано в данном<br>
+                примере<br>
+            </li>
+        </ul>
+    </div>
+    <div class="article">
+        <h1>Статья 1</h1>
+        Размер блока:<br>
+        Занимает всю доступную ширину<br>
+        Должен присутствовать цвет фона<br>
+        Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи<br>
+        свойства margin-bottom
+    </div>
+    <div class="article">
+        <h1>Статья 2</h1>
+        Размер блока:<br>
+        Занимает всю доступную ширину<br>
+        Должен присутствовать цвет фона<br>
+        Во всех "статьях" сделайте отступ снизу от соседей равным .2em, при помощи<br>
+        свойства margin-bottom. Картинка вставлена при помощи тега, плавание<br>
+        организовано по правому краю внутри данной статьи для этой картинки.<br>
+        <img src="data/icon_mail.png" alt="icon_mail" class="right">
+    </div>
+    <div class="footer">
+        Нижний блок, занимает всю доступную ширину. Высота определяется помещенным внутрь контентом.
+</body>
+
+</html>
