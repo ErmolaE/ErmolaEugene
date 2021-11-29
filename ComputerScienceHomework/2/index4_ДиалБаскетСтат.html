@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+	<script>
+
+		name = prompt("Здравствуй игрок! Как тебя зовут?");
+		alert("Вчера был крутой баскетбольный матч, " + name + "!");
+		name1 = prompt("Под каким номером ты играешь?");
+		alert(name1 + " - счастливое число для тебя!");
+		time = Number(prompt(name + ", сколько ты вчера сыграл минут?"));
+		ball2 = Number(prompt("Сколько ты забил двухочковых бросков?"));
+		attball2 = Number(prompt("А сколько сделал попыток двухочковых бросков?")); //должно быть больше ball2 
+		ball3 = Number(prompt("Сколько ты забил трехочковых бросков?"));
+		attball3 = Number(prompt("А сколько сделал попыток трехочковых бросков?")); //должно быть больше ball3
+		attball1 = Number(prompt("Сколько ты раз выполнял штрафной бросок?"));
+		ball1 = Number(prompt("А сколько штрафных забил?")); //должно быть меньше attball1
+		pts = ball2*2+ball3*3+ball1;
+		per = 100*(ball2+ball3)/(attball2+attball3);
+		per1 = 100*ball1/attball1;
+		alert("Неплохо, " + name + "! Получается что ты набрал " + pts + " очков при " + per + "% с игры и " + per1 + "% со штрафной линии!");
+		rebD = Number(prompt(name + ", а сколько ты сделал подборов в защите?"));
+		rebA = Number(prompt("А в атаке?"));
+		reb = rebA + rebD;
+		alert("Молодец, " + name + " всего " + reb + " подборов.");
+		as = Number(prompt("А сколько ты сделал результативных передач?"));
+		st = Number(prompt("А сколько ты сделал перехватов?"));
+		bl = Number(prompt("А сколько ты сделал блоков?"));
+		to = Number(prompt("А сколько сделал потерь?"));
+		pf = Number(prompt("А сколько раз сфолил?"));
+		kpi = (pts+as+1.4*st+1.2*bl+1.2*rebD+1.4*rebA-attball2-1.5*attball3-0.8*attball1-1.2*to-pf)/time; // Немного упрощенная формула из программы статистики FIBA
+		alert("Твой коэффициент полезности, " + name + ", составил " + kpi + ". Постарайся быть лучше на следующей игре!");
+		
+	</script>
+
+</body>
+</html>

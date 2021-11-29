@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+		<body>
+
+			<script>
+
+				journal = [["№",  "Фамилия", "Имя", "Отчество", "математика", "физкультура", "русский язык", "история"],
+						   [1, "Иванов", "Иван", "Иванович", 5, 6, 7, 8],
+						   [2, "Петров", "Петр", "Петрович", 7, 8, 4, 6],
+						   [3, "Александров", "Александр", "Александрович", 5, 8, 9, 7],
+						   [4, "Зубенко", "Михаил", "Петрович", 8, 7, 7, 5],
+						   [5, "Сидоров", "Антон", "Михайлович", 6, 7, 8, 8]];
+				/*  вывод в консоль информации о классе одним сообщением (ниже сделан вывод информации о каждом ученике в одной строке): 
+				a=""
+				for(i=1;i<journal.length;i++){
+					a=a+"У нас учится " + journal[i][2] + " " + journal[i][1] + ", по " + journal[0][4] + " у него " + journal[i][4] +  ", по " + journal[0][5] + " у него " + journal[i][5] + ", по " + journal[0][6] + " у него " + journal[i][6] + ", по " + journal[0][7] + " у него " + journal[i][7] + ". "
+				}
+				console.log(a)*/
+				for(i=1;i<journal.length;i++){
+					a="У нас учится " + journal[i][2] + " " + journal[i][1] + ", по " + journal[0][4] + " у него " + journal[i][4] +  ", по " + journal[0][5] + " у него " + journal[i][5] + ", по " + journal[0][6] + " у него " + journal[i][6] + ", по " + journal[0][7] + " у него " + journal[i][7] + ". "
+				console.log(a)
+				}
+				answer="";
+				while(answer!=3){
+					answer=prompt("Если хотите изменить оценку ученика введите 1. Если хотите узнать оценку ученика введите 2. Если хотите завершить программу введите 3.");
+					if(answer!=1&&answer!=2&&answer!=3){
+						alert("Неверный ввод!");
+					}
+					if(answer==1){
+						Surname=prompt("Введите фамилию ученика, у которого хотите изменить оценку");
+						/*if (journal.indexOf(Surname) === -1) {   			// Хотел сделать проверку на неправильный ввод фамилии и предмета - не сработало(
+						alert("Такого ученика нет!");
+						} else {*/
+								Subject=prompt("Введите предмет");
+								/*if (journal.indexOf(Subject) === -1) {   
+									alert("Такого предмета нет!");
+								} else {*/
+										for(j=1;Surname!=journal[j][1];j++){
+										}
+										for(k=0;Subject!=journal[0][k];k++){
+										}
+										ball=prompt("Текущая оценка " + journal[j][k] + ". Введите новую оценку.");
+										journal[j][k]=ball;
+									//}
+							//}
+						
+					}
+					if(answer==2){
+						Surname=prompt("Введите фамилию ученика, у которого хотите увидеть оценку");
+						Subject=prompt("Введите предмет");
+						for(j=1;Surname!=journal[j][1];j++){
+						}
+						for(k=0;Subject!=journal[0][k];k++){
+						}
+						alert("У " + journal[j][2] + " " + journal[j][1] + " по " + journal[0][k] + " " + journal[j][k] + ".");
+						
+					}
+					for(i=1;i<journal.length;i++){           // добавил чтобы видеть изменения
+					a="У нас учится " + journal[i][2] + " " + journal[i][1] + ", по " + journal[0][4] + " у него " + journal[i][4] +  ", по " + journal[0][5] + " у него " + journal[i][5] + ", по " + journal[0][6] + " у него " + journal[i][6] + ", по " + journal[0][7] + " у него " + journal[i][7] + ". "
+				console.log(a)
+				}
+				}
+				
+				
+			</script>
+
+		</body>
+</html>

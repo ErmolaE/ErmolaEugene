@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+	</head>
+		<body>
+
+			<script>
+
+				street = ["ленина",  "красивая", "морская", "садовая"];
+				a = prompt("Введите название вашей улицы").toLowerCase();
+				if (street.indexOf(a) === -1) {   
+					alert("Такой улицы нет!");
+				} else {
+						for(i=0;a!=street[i];i++){
+						}
+						if(i==0){
+							alert("Ваша улица находится перед " + street[i+1]);
+						}
+						if(i!=0 && i!=street.length-1){
+							alert("Ваша улица находится между " + street[i-1] + " и " + street[i+1]);
+						}
+						if(i==street.length-1){
+							alert("Ваша улица находится после " + street[i-1]);
+						}
+					}
+				
+			</script>
+
+		</body>
+</html>

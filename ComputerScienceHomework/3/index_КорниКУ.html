@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+
+	<script>
+
+		alert("Найдем корни квадратного уравнения ax^2+bx+c=0");
+		a = Number(prompt("Введите значение a"));
+		if(isNaN(a)){do {
+						alert("Некорректный ввод");
+						a = Number(prompt("Введите значение a"));
+						}
+					while(isNaN(a));
+		} 
+		b = Number(prompt("Введите значение b"));
+		if(isNaN(b)){do {
+						alert("Некорректный ввод");
+						b = Number(prompt("Введите значение b"));
+					    }
+					while(isNaN(b));
+		}
+		c = Number(prompt("Введите значение c"));
+		if(isNaN(c)){do {
+						alert("Некорректный ввод");
+						c = Number(prompt("Введите значение c"));
+					    }
+					while(isNaN(c));
+		}
+		if(a==0){
+			x=-c/b;
+			alert("Решение: " + x);
+			} else{
+		D = (b**2-4*a*c);
+		if(D>0){
+			x1 = (-b+Math.sqrt(D))/2*a;
+			x2 = (-b-Math.sqrt(D))/2*a;
+			alert("Решение: " + x1 + ";" + x2);
+		}
+		if(D<0){
+			alert("Решение: корней нет");
+		}
+		if(D==0){
+			x = -b/2*a;
+			alert("Решение: " + x);
+		}
+				}
+			
+	</script>
+
+</body>
+</html>
