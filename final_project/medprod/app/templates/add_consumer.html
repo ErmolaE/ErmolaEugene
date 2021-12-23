@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+<form>
+    <fieldset>
+      <legend>Add consumer</legend>
+      <div class="form-group">
+        <label class="col-form-label col-form-label-lg" for="inputLarge">consumer_name</label>
+        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg" id="inputLarge">
+      </div>
+      <div class="form-group">
+        <label for="exampleTextarea">adress</label>
+        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">phone_number</label>
+        <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">postcode</label>
+        <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+      </div>
+      <div class="form-group">
+        <label class="col-form-label" for="inputDefault">site</label>
+        <input type="text" class="form-control" placeholder="Default input" id="inputDefault">
+      </div>
+      <div class="form-group">
+        <label for="exampleSelect1">transportation</label>
+        <select class="form-control" id="exampleSelect1">
+          <option>auto</option>
+          <option>railway</option>
+          <option>air</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </fieldset>
+  </form>
+
+{% endblock maincontent %}

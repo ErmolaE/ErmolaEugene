@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+    <h1>Materials</h1>
+    <div class="list-group">
+    {% for m in materials %}
+        <a href="{{ m.supplier.site }}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ m.material_name }}</h5>
+                {% if m.molar_mass %}
+                    <small>Molar mass: {{ m.molar_mass }}</small>
+                {% endif %}
+                {% if m.density %}
+                    <small>Density: {{ m.density }}</small>
+                {% endif %}
+            </div>
+            <p class="mb-1">Price: {{ m.price }} &#8364;</p>
+            <p class="mb-1">Supplier: {{ m.supplier }}</p>
+        </a>
+    {% endfor %}
+    </div>
+
+{% endblock maincontent %}

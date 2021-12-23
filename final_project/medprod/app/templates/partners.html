@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+    <h1>Consumers</h1>
+    <div class="list-group">
+    {% for c in consumers %}
+        <a href="{{ c.site }}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ c.consumer_name }}</h5>
+              <small>Phone number: {{ c.phone_number }}</small>
+            </div>
+            <p class="mb-1">Adress: {{ c.adress }}</p>
+            <small>Postcode: {{ c.postcode }}</small>
+        </a>
+    {% endfor %}
+    </div>
+
+    <h1>Suppliers</h1>
+    <div class="list-group">
+    {% for s in suppliers %}
+        <a href="{{ c.site }}" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">{{ s.supplier_name }}</h5>
+              <small>Phone number: {{ s.phone_number }}</small>
+            </div>
+            <p class="mb-1">Adress: {{ s.adress }}</p>
+            <small>Postcode: {{ s.postcode }}</small>
+        </a>
+    {% endfor %}
+    </div>
+
+{% endblock maincontent %}

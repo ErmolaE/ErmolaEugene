@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+<h1>Application</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+        <thead>
+            <tr>
+            <th>#</th>
+            <th>immunology</th>
+            <th>surgery</th>
+            <th>allergology</th>
+            <th>infectology</th>
+            <th>intensive_therapy</th>
+            <th>cardiology</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in applications %}
+                <tr>
+                <td>{{ a.product.product_name }}</td>
+                {% if a.immunology %}
+                    <td align="center">+</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+                {% if a.surgery %}
+                    <td align="center">+</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+                {% if a.allergology %}
+                    <td align="center">+</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+                {% if a.infectology %}
+                    <td align="center">+</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+                {% if a.intensive_therapy %}
+                    <td align="center">+</td>
+                {% else %}
+                    <td></td>
+                {% endif %}
+                {% if a.cardiology %}
+                    <td align="center">+</td>
+                {% else %}
+                    <td></td>
+                {% endif %}            
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock maincontent %}

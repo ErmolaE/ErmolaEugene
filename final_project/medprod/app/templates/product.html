@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+<div class="card mb-3">
+    <h3 class="card-header">{{ product.product_name|capfirst }}</h3>
+    <div class="card-body">
+        <h5 class="card-title">Product id: {{ product.id_product }}</h5>
+        {% if product.price %}
+            <h6 class="card-subtitle text-muted"> Price: {{ product.price }} &#8364;</h6>
+        {% else %}
+            <h6 class="card-subtitle text-muted">Price: Not for sale</h6>
+        {% endif %}
+    </div>
+    {% if product.image %}
+        <img class="d-block user-select-none" src="{{ product.image.url }}"/>
+    {% else %}
+        {% load static %}
+        <img  class="d-block user-select-none" src="{% static 'app/img/not_avalaible.png' %}"/>
+    {% endif %}
+    <div class="card-body">
+      <p class="card-text">Description: {{ product.description }}</p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Matryx type: {{ product.matrix_type }}</li>
+      <li class="list-group-item">Ligand: {{ product.ligand }}</li>
+    </ul>
+    <!-- <div class="card-body">
+      <a href="#" class="card-link">Prev</a>
+      <a href="#" class="card-link">Next</a> 
+    </div> -->
+  </div>
+
+{% endblock maincontent %}

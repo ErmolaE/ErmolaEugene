@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block maincontent %}
+
+    <h1>Employes</h1>
+    <div class="row">
+    {% for e in employes %}    
+    <div  class="col-md-4" class="card border-info mb-3" style="max-width: 20rem;">
+        <div class="card-header">{{ e.full_name }}</div>
+        <div class="card-body">
+        <h4 class="card-title">Position: {{ e.position }}</h4>
+        <p class="card-text">Date of birth: {{ e.dob }}</p>
+        <p class="card-text">Rate: {{ e.rate }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock maincontent %}
