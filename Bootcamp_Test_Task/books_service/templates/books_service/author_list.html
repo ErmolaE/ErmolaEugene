@@ -19,6 +19,12 @@
 {% else %}
   <p>There are no authors available.</p>
 {% endif %}
+  <p>
+    <a href="{% url 'author-create' %}">Add Author</a>
+    <!--{% if perms.books_service.add_author %}
+    <a href="{% url 'add_author' %}">Add Author</a>
+    {% endif %}-->
+  </p>
         
         
         

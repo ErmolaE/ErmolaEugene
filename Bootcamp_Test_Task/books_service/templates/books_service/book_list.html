@@ -16,4 +16,10 @@
     {% else %}
       <p>There are no books in the Books service.</p>
     {% endif %}
+    <p>
+      <a href="{% url 'book-create' %}">Add Book</a>
+      <!--{% if perms.books_service.add_book %}
+      <a href="{% url 'add_book' %}">Add Book</a>
+      {% endif %}-->
+    </p>
 {% endblock %}
